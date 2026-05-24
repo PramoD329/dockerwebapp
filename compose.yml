@@ -1,18 +1,15 @@
+---
 version: "3.9"
 
 services:
   devopsdb:
-    image: pramodcg32/auto:db
+    image: pramodcg32/img:db
     ports:
       - "3306:3306"
-    deploy:
-      replicas: 3
 
   application:
-    image: pramodcg32/auto:app
+    image: pramodcg32/img:app
     ports:
       - "2222:8080"
-    deploy:
-      replicas: 3
     depends_on:
       - devopsdb
