@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   devopsdb:
-    image: shaikmustafa/automation:db
+    image: pramodcg32/auto:db
     ports:
       - "3306:3306"
     deploy:
@@ -11,7 +11,7 @@ services:
       - mynetwork
 
   application:
-    image: shaikmustafa/automation:app
+    image: pramodcg32/auto:app
     ports:
       - "1111:8080"
     deploy:
