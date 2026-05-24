@@ -7,8 +7,6 @@ services:
       - "3306:3306"
     deploy:
       replicas: 3
-    networks:
-      - mynetwork
 
   application:
     image: pramodcg32/auto:app
@@ -18,9 +16,3 @@ services:
       replicas: 3
     depends_on:
       - devopsdb
-    networks:
-      - mynetwork
-
-networks:
-  mynetwork:
-    driver: overlay
